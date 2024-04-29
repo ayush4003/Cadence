@@ -1,0 +1,106 @@
+{
+	"contracts": {
+		"BuyWithToken": "cadence/contracts/standards/BuyWithToken.cdc",
+		"ExampleNFT": {
+			"source": "",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
+		"ExampleToken": "cadence/contracts/standards/ExampleToken.cdc",
+		"FUSD": {
+			"source": "",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
+		"FlowToken": {
+			"source": "",
+			"aliases": {
+				"emulator": "0ae53cb6e3f42a79"
+			}
+		},
+		"FungibleToken": {
+			"source": "cadence/contracts/standards/FungibleToken.cdc",
+			"aliases": {
+				"emulator": "ee82856bf20e2aa6"
+			}
+		},
+		"FungibleTokenMetadataViews": "cadence/contracts/standards/FungibleTokenMetadataViews.cdc",
+		"Lending_Borrow": "cadence/contracts/L\u0026B/L\u0026B.cdc",
+		"MetadataViews": {
+			"source": "cadence/contracts/standards/MetadataViews.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
+		"NFTStorefront": {
+			"source": "",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
+		"NFTStorefrontV2": {
+			"source": "",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
+		"NonFungibleToken": {
+			"source": "cadence/contracts/standards/NonFungibleToken.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
+		"OLMAccounting": "cadence/contracts/OLM/OLMAccounting.cdc",
+		"OptionToken": "cadence/contracts/OLM/OptionToken.cdc",
+		"PayoutToken": "cadence/contracts/standards/PayoutToken.cdc",
+		"StakeToken": "cadence/contracts/standards/StakeToken.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"L\u0026B": {
+			"address": "045a1763c93006ca",
+			"key": "6d12eebfef9866c9b6fa92b97c6e705c26a1785b1e7944da701fc545a51d4673"
+		},
+		"OLM": {
+			"address": "120e725050340cab",
+			"key": "6d12eebfef9866c9b6fa92b97c6e705c26a1785b1e7944da701fc545a51d4673"
+		},
+		"default": {
+			"address": "e03daebed8ca0615",
+			"key": "6d12eebfef9866c9b6fa92b97c6e705c26a1785b1e7944da701fc545a51d4673"
+		},
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "6d12eebfef9866c9b6fa92b97c6e705c26a1785b1e7944da701fc545a51d4673"
+		},
+		"standards": {
+			"address": "f669cb8d41ce0c74",
+			"key": "6d12eebfef9866c9b6fa92b97c6e705c26a1785b1e7944da701fc545a51d4673"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"L\u0026B": [
+				"Lending_Borrow"
+			],
+			"OLM": [
+				"OLMAccounting",
+				"OptionToken"
+			],
+			"default": [],
+			"standards": [
+				"BuyWithToken",
+				"ExampleToken",
+				"FungibleTokenMetadataViews",
+				"PayoutToken",
+				"StakeToken"
+			]
+		}
+	}
+}
