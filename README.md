@@ -5,61 +5,56 @@ A set of protocols that redefine how current deFi operates
 ### L&B User Flow
 
 - setup admin params <br>
-`flow transactions send "cadence\transactions\L&B\setupAdminParams.cdc" --signer "L&B"`
+`Cadence transactions send "cadence\transactions\L&B\setupAdminParams.cdc" --signer "L&B"`
 
 - create new bucket <br>
-`flow transactions send "cadence\transactions\L&B\createNewBucket.cdc" --signer default`
+`Cadence transactions send "cadence\transactions\L&B\createNewBucket.cdc" --signer default`
 
 - mint some tokens for yourself <br>
-`flow transactions send "cadence\transactions\standards\mintSomeExampleTokens.cdc" --signer default 1000000.0`
+`Cadence transactions send "cadence\transactions\standards\mintSomeExampleTokens.cdc" --signer default 1000000.0`
 
 - get your bucketIds for next txn <br>
-`flow scripts execute "cadence\scripts\L&B\fetchAllBuckets.cdc" {default-signers-address}`
+`Cadence scripts execute "cadence\scripts\L&B\fetchAllBuckets.cdc" {default-signers-address}`
 
 - supply tokens to pool <br>
-`flow transactions send "cadence\transactions\L&B\supplyTokensToPool.cdc" --signer default 100.0 {your-bucketId}`
+`Cadence transactions send "cadence\transactions\L&B\supplyTokensToPool.cdc" --signer default 100.0 {your-bucketId}`
 
 - borrow from the poool <br>
-`flow transactions send "cadence\transactions\L&B\borrowTokensFromPool.cdc" --signer default 70.0 {your-bucketId}`
+`Cadence transactions send "cadence\transactions\L&B\borrowTokensFromPool.cdc" --signer default 70.0 {your-bucketId}`
 
 - repay to pool <br>
-`flow transactions send "cadence\transactions\L&B\repayTokensToPool.cdc" --signer default 70.0 {your-bucketId}`
+`Cadence transactions send "cadence\transactions\L&B\repayTokensToPool.cdc" --signer default 70.0 {your-bucketId}`
 
 - unsupply tokens to pool <br>
-`flow transactions send "cadence\transactions\L&B\unsupplyTokensToPool.cdc" --signer default 70.0 {your-bucketId}`
+`Cadence transactions send "cadence\transactions\L&B\unsupplyTokensToPool.cdc" --signer default 70.0 {your-bucketId}`
 
 
 ### OLM User Flow
 
 
 - setup admin params <br>
-`flow transactions send "cadence\transactions\OLM\setupAdminParams.cdc" --signer OLM`
+`Cadence transactions send "cadence\transactions\OLM\setupAdminParams.cdc" --signer OLM`
 
 - mint some buyWith tokens for yourself <br>
-`flow transactions send "cadence\transactions\standards\mintSomeBuyWithTokens.cdc" --signer default 1000000.0`
+`Cadence transactions send "cadence\transactions\standards\mintSomeBuyWithTokens.cdc" --signer default 1000000.0`
 
 - mint some staking tokens for yourself <br>
-`flow transactions send "cadence\transactions\standards\mintSomeStakeTokens.cdc" --signer default 1000000.0`
+`Cadence transactions send "cadence\transactions\standards\mintSomeStakeTokens.cdc" --signer default 1000000.0`
 
 - stake in the contract <br>
-`flow transactions send "cadence\transactions\OLM\stakeTokens.cdc" --signer default 100.0`
+`Cadence transactions send "cadence\transactions\OLM\stakeTokens.cdc" --signer default 100.0`
 
 - claim oTokens as reward <br>
-`flow transactions send "cadence\transactions\OLM\claimOTokens.cdc" --signer default`
+`Cadence transactions send "cadence\transactions\OLM\claimOTokens.cdc" --signer default`
 
 - redeem oTokens for payout Tokens <br>
-`flow transactions send "cadence\transactions\OLM\redeemOTokens.cdc" --signer default`
+`Cadence transactions send "cadence\transactions\OLM\redeemOTokens.cdc" --signer default`
 
 - unstake your tokens <br>
-`flow transactions send "cadence\transactions\OLM\unstakeTokens.cdc" --signer default`
+`Cadence transactions send "cadence\transactions\OLM\unstakeTokens.cdc" --signer default`
 
 
-### 🔨 Getting started
-Getting started can feel overwhelming, but we are here for you. Depending on how accustomed you are to Flow here's a list of resources you might find useful:
-- **[Cadence documentation](https://developers.flow.com/cadence/language)**: here you will find language reference for Cadence, which will be the language in which you develop your smart contracts,
-- **[Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=DX_841432)** and **[Cadence extension](https://marketplace.visualstudio.com/items?itemName=onflow.cadence)**: we suggest using Visual Studio Code IDE for writing Cadence with the Cadence extension installed, that will give you nice syntax highlitning and additional smart features,
-- **[SDKs](https://developers.flow.com/tools#sdks)**: here you will find a list of SDKs you can use to ease the interaction with Flow network (sending transactions, fetching accounts etc),
-- **[Tools](https://developers.flow.com/tools#development-tools)**: development tools you can use to make your development easier, [Flowser](https://docs.flowser.dev/) can be super handy to see what's going on the blockchain while you develop
+
 
 
 ### 📦 Project Structure
@@ -77,7 +72,7 @@ Inside `cadence` folder you will find:
 ### 👨‍💻 Start Developing
 After creating this project using the flow setup command you should then start the emulator by running:
 ```
-> flow emulator --contracts
+> Cadence emulator --contracts
 ```
 _we use `--contracts` flag to include more already deployed contract we can then easily import in our project._
 
@@ -85,7 +80,7 @@ and then start the development command by running:
 ```shell
 > flow dev
 ```
-After the command is started it will automatically watch any changes you make to Cadence files and make sure to continiously sync those changes on the emulator network. If you make any mistakes it will report the errors as well. Read more [about the command here](https://developers.flow.com/tools/flow-cli/super-commands)
+After the command is started it will automatically watch any changes you make to Cadence files and make sure to continiously sync those changes on the emulator network. If you make any mistakes it will report the errors as well. 
 
 **Importing Contracts**
 
@@ -128,7 +123,4 @@ You can already import certain common contracts we included for you, just make s
 
 
 ### Further Reading
-
-- Cadence Language Reference https://developers.flow.com/cadence/language
-- Flow Smart Contract Project Development Standards https://developers.flow.com/cadence/style-guide/project-development-tips
-- Cadence anti-patterns https://developers.flow.com/cadence/anti-patterns
+https://www.cadenceprotocol.io/
